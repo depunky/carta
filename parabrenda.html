@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="icon" type="image/x-icon" href="https://mercadojamaicaonline.com/cdn/shop/products/IMG_8650.jpg" />
+		<title>Para ti</title>
+	</head>
+	<body bgcolor=#e9cdcd onload="llamaHuapango()" >
+
+	<center>
+	<br>
+	<img style="max-width: 100%; height: auto;" id="miImagen" width="400">
+
+	<script>
+		let imagen = document.getElementById('miImagen');
+		imagen.style.display = 'none';
+		function llamaHuapango() 
+		{
+			let nombre = prompt("Escribe tu huapango favorito", " ");
+			if (nombre == "anhelo"  ||  nombre == "Anhelo" ||  nombre == "ANHELO" ||  nombre == "el anhelo"  ||  nombre == "El anhelo"  ||  nombre == "El Anhelo"  ||  nombre == "EL ANHELO") 
+			{
+				alert("Hola Brenda!");
+				imagen.src = 'carta.png'; // Cambia por la imagen
+				imagen.style.display = 'block'; // Muestra la imagen
+			}
+			else if (nombre === null) 
+			{
+				alert("Si no lo sabes no es para ti");
+			}
+			else 
+			{
+				alert("Intentalo de nuevo!");
+				imagen.style.display = 'none'; // Oculta si no se cumple
+				location.reload();
+			}
+		}
+	</script>
+	</center>
+	</body>
+
+</html>
